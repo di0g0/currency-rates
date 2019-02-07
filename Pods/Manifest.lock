@@ -1,16 +1,33 @@
 PODS:
   - Alamofire (4.8.1)
+  - FlagKit (2.0.1)
+  - Mockingjay (2.0.1):
+    - Mockingjay/Core (= 2.0.1)
+    - Mockingjay/XCTest (= 2.0.1)
+  - Mockingjay/Core (2.0.1):
+    - URITemplate (~> 2.0)
+  - Mockingjay/XCTest (2.0.1):
+    - Mockingjay/Core
+  - URITemplate (2.0.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - FlagKit
+  - Mockingjay
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FlagKit
+    - Mockingjay
+    - URITemplate
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  FlagKit: 75c64346179f254d1753bebdc5b1f9cbe7890748
+  Mockingjay: 11a621880d2887f1775bdcf824341eb68f218450
+  URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
 
-PODFILE CHECKSUM: 8d0cb89b4ec5f6515082cb10f25a1485ddbe0bad
+PODFILE CHECKSUM: 1b1baf41f3fb0f38f7c01b0f0a1aec6043e234b5
 
 COCOAPODS: 1.5.3

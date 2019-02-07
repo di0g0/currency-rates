@@ -6,10 +6,11 @@ target 'Revolut' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.7'
+  pod 'Mockingjay'
+  pod 'FlagKit'
 
   target 'RevolutTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
   target 'RevolutUITests' do
