@@ -29,6 +29,8 @@
 		DD65CD93220C2894000D6E7C /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65CD92220C2894000D6E7C /* ViewControllerTests.swift */; };
 		DD65CD95220C437E000D6E7C /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65CD94220C437E000D6E7C /* NetworkTests.swift */; };
 		DD65CD97220C445E000D6E7C /* latest.json in Resources */ = {isa = PBXBuildFile; fileRef = DD65CD96220C445E000D6E7C /* latest.json */; };
+		DD65CD99220C5A94000D6E7C /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65CD98220C5A94000D6E7C /* UINavigationBar+Extensions.swift */; };
+		DD65CD9B220C5ACF000D6E7C /* InterfaceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65CD9A220C5ACF000D6E7C /* InterfaceManager.swift */; };
 		E16610D43D7427AA521BD386 /* Pods_RevolutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC27CA5DCD6432F0CDFDF6B /* Pods_RevolutTests.framework */; };
 		F595E790E98CB08FA17B1268 /* Pods_RevolutUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D0C7BB4576E724F69045B4 /* Pods_RevolutUITests.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +87,8 @@
 		DD65CD92220C2894000D6E7C /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		DD65CD94220C437E000D6E7C /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		DD65CD96220C445E000D6E7C /* latest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = latest.json; sourceTree = "<group>"; };
+		DD65CD98220C5A94000D6E7C /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
+		DD65CD9A220C5ACF000D6E7C /* InterfaceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceManager.swift; sourceTree = "<group>"; };
 		EE45EE9E9FE448FC95888118 /* Pods-Revolut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Revolut.release.xcconfig"; path = "Pods/Target Support Files/Pods-Revolut/Pods-Revolut.release.xcconfig"; sourceTree = "<group>"; };
 		F21898C1DFB73AAF87CE40A3 /* Pods-Revolut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Revolut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Revolut/Pods-Revolut.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +227,7 @@
 			children = (
 				DD65CD86220BD3E9000D6E7C /* Double+Extensions.swift */,
 				DD65CD90220C1769000D6E7C /* UITableView+Extensions.swift */,
+				DD65CD98220C5A94000D6E7C /* UINavigationBar+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				DD65CD89220BEBA4000D6E7C /* ConversionManager.swift */,
+				DD65CD9A220C5ACF000D6E7C /* InterfaceManager.swift */,
 				DD65CD84220BD26C000D6E7C /* Constants.swift */,
 			);
 			path = Util;
@@ -285,6 +291,7 @@
 				DD65CD53220B8732000D6E7C /* Sources */,
 				DD65CD54220B8732000D6E7C /* Frameworks */,
 				DD65CD55220B8732000D6E7C /* Resources */,
+				37EE44DA81DE6652CA58AE2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -387,6 +394,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		37EE44DA81DE6652CA58AE2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RevolutTests/Pods-RevolutTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework",
+				"${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mockingjay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URITemplate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RevolutTests/Pods-RevolutTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8AE25E912DD7AF7947C2B577 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,8 +451,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Revolut/Pods-Revolut-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FlagKit/FlagKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Mockingjay/Mockingjay.framework",
-				"${BUILT_PRODUCTS_DIR}/URITemplate/URITemplate.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -429,8 +458,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlagKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mockingjay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URITemplate.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -488,9 +515,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD65CD99220C5A94000D6E7C /* UINavigationBar+Extensions.swift in Sources */,
 				DD65CD77220B99AF000D6E7C /* CurrencyRatesService.swift in Sources */,
 				DD65CD8C220C0DFC000D6E7C /* CurrencyViewModel.swift in Sources */,
 				DD65CD7F220BA393000D6E7C /* CurrencyListViewController.swift in Sources */,
+				DD65CD9B220C5ACF000D6E7C /* InterfaceManager.swift in Sources */,
 				DD65CD79220B9EA2000D6E7C /* APIRouter.swift in Sources */,
 				DD65CD7D220BA09F000D6E7C /* CurrencyRateResponse.swift in Sources */,
 				DD65CD87220BD3E9000D6E7C /* Double+Extensions.swift in Sources */,
