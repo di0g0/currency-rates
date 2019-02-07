@@ -11,4 +11,4 @@ Just to make it easier, I've chosen to add Pods directory to the repo, so you do
 
 - [Alamofire](https://github.com/Alamofire/Alamofire) - HTTP networking library.
 - [FlagKit](https://github.com/madebybowtie/FlagKit) - Load Flag images of currencies' countries
-- [SDWebImage](https://github.com/kylef/Mockingjay) - Stubs requests for Unit Tests
+- [Mockingjay](https://github.com/kylef/Mockingjay) - Stubs requests for Unit Tests
